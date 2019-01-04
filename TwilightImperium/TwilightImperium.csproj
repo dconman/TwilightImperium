@@ -35,5 +35,50 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ActionCard.cs" />
+    <Compile Include="Classes\Anomaly.cs" />
+    <Compile Include="Classes\Card.cs" />
+    <Compile Include="Classes\ComponentAction.cs" />
+    <Compile Include="Classes\GameState.cs" />
+    <Compile Include="Classes\PromisoryNotes.cs" />
+    <Compile Include="Data\FactionStartingUnits.cs" />
+    <Compile Include="Data\FactionStartingUnitStats.cs" />
+    <Compile Include="Enums\Wormhole.cs" />
+    <Compile Include="GameFlow.cs" />
+    <Compile Include="Hex\HexCoord.cs" />
+    <Compile Include="Classes\Location.cs" />
+    <Compile Include="Classes\Planet.cs" />
+    <Compile Include="Classes\Tile.cs" />
+    <Compile Include="Classes\Technology.cs" />
+    <Compile Include="Classes\Unit.cs" />
+    <Compile Include="Hex\Directions.cs" />
+    <Compile Include="Enums\Faction.cs" />
+    <Compile Include="Enums\PlanetTrait.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Enums\TechType.cs" />
+    <Compile Include="Classes\UnitStats.cs" />
+    <Compile Include="Classes\UnitAbility.cs" />
+    <Compile Include="Enums\UnitAbilityID.cs" />
+    <Compile Include="Enums\UnitType.cs" />
+    <Compile Include="Hex\HexCoordsExtensionMethods.cs" />
+    <Compile Include="Interaction.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Util\EnumUtil.cs" />
+    <Compile Include="Util\EnumExtensions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnumExtensions.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Util\EnumExtensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EnumExtensions.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

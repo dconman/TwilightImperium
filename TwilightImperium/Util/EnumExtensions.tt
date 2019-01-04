@@ -1,0 +1,24 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="C:\Users\DC046204\source\repos\TwilightImperium\TwilightImperium\bin\Debug\TwilightImperium.exe" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+<# var types = Assembly.GetExecutingAssembly()
+                    .GetTypes()
+                    .Where(type =>
+                        type.IsEnum && type.Namespace == "TwilightImperium.Enums" &&
+                        type.GetCustomAttribute<FlagsAttribute>() != null).Select(t => t.Name); #>
+// This is generated code:
+namespace TwilightImperium.Enums {
+  static class EnumExtensions {
+<# // This code runs in the text template:
+  foreach (string typeName in types)  { #>
+  // Generated code:
+  public static bool FlagCompare( this <#= typeName #> value, <#= typeName #> flag) {
+    return value & flag != 0;
+	}
+<# } #>
+  }
+}
